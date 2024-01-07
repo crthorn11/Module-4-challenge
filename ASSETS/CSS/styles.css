@@ -10,7 +10,7 @@ body {
 }
 
 .website {
-    background: rgb(216, 216, 255);
+    background: rgb(255, 255, 255);
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -45,8 +45,45 @@ body {
     border: 1px solid blueviolet;
     font-weight: 500;
     cursor: pointer;
-    width: 25%;
-    margin: 10px 0;
-    padding: 10px;
-    align-content: space-evenly
+    width: 50%;
+    margin: 5px 0;
+    padding: 5px;
+}
+.btn:hover:not([disabled]){
+    background: blueviolet;
+    color: rgb(255, 255, 255);
+    opacity: 75%;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn {
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    border-radius: 5px;
+    justify-content: right;
+    font-size: 15px;
+    padding: 2.5px;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background: blueviolet;
+}
+
+.incorrect{
+    background:rgb(161, 83, 234);
+}
+
+.hide{
+    display: none;
+}
+
+#countdown{
+    position:absolute;
+    top: 10px;
+    right: 10px;
 }

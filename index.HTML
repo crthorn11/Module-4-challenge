@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./ASSETS/CSS/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   <div class="website">
-      <h1>Coding Quiz Challenge</h1> 
-      <div class="quiz">
-   <h2 id="question">Questions here</h2>
-<div id="answer-buttons">
-    <button class="btn">Answer 1</button>
-    <button class="btn">Answer 2</button>
-    <button class="btn">Answer 3</button>
-    <button class="btn">Answer 4</button>
-</div>
-    <script src="script.js"></script>
+    <div class="website">
+        <h1>Coding Quiz Challenge</h1>
+        <div id="start-screen">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ut pariatur, quasi minus cum ex dolore repellendus fugiat animi nihil dignissimos nesciunt quo, eum accusamus obcaecati optio voluptatem fugit inventore.</p>
+            <button id="start-btn">start</button>
+        </div>
+        <div id="quiz-screen" class="hide">
+            <h2 id="question">Questions here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+                <button id="next-btn">Next</button>
+        </div>
+
+
+
+        <div id="countdown">1:00</div>
+
+        <div id="initial-screen" class="hide">
+            <p>Insert your initial below</p>
+            <input type="type" max="3" id="">
+            <button>Submit</button>
+        </div>
+    </div>
+    <script src="./ASSETS/script.js"></script>
 </body>
 </html>
