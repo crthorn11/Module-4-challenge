@@ -12,7 +12,7 @@
     <div class="website">
         <h1>Coding Quiz Challenge</h1>
         <div id="start-screen">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ut pariatur, quasi minus cum ex dolore repellendus fugiat animi nihil dignissimos nesciunt quo, eum accusamus obcaecati optio voluptatem fugit inventore.</p>
+            <p>Welcome to my coding quiz! During this quiz you will have 1 minute to answer five questions related to website developement. Hope you have studied because when the quiz starts there is no going back!</p>
             <button id="start-btn">start</button>
         </div>
         <div id="quiz-screen" class="hide">
@@ -23,19 +23,22 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
-                <button id="next-btn">Next</button>
+            <button id="next-btn">Next</button>
         </div>
 
 
 
-        <div id="countdown">1:00</div>
+        <div id="countdown">Time: <span id="countDown">60</span> </div>
 
         <div id="initial-screen" class="hide">
-            <p>Insert your initial below</p>
-            <input type="type" max="3" id="">
-            <button>Submit</button>
+            <form id="initial-form">
+                <p>Insert your initial below</p>
+                <input type="text" max="3" id="initial-input">
+                <button id="initial-btn" type="submit">Submit</button>
+            </form>
         </div>
     </div>
     <script src="./ASSETS/script.js"></script>
 </body>
+
 </html>
