@@ -94,3 +94,15 @@ body {
 #countdown {
     font-size: 25px;
 }
+
+#view-scores {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#start-screen {
+    font-size: large;
+    font-weight: 600;
+    color: black;
+}

@@ -59,6 +59,10 @@ const inputDiv = document.getElementById("initial-screen");
 const initialButton = document.getElementById("initial-btn");
 const initialForm = document.getElementById("initial-form");
 
+const div = document.querySelector("div");
+const viewScores = document.getElementById("view-scores");
+const savedScores = document.getElementById("scores");
+
 initialButton.addEventListener("click", function (event) {
     saveScore(event);
 });
@@ -68,14 +72,13 @@ let currentQuestionIndex = 0;
 let score = 0;
 let intervalHolder;
 
-
-
 function startQuiz() {
     startScreen.classList.add("hide");
     quizScreen.classList.remove("hide");
     showQuestion();
     intervalHolder = setInterval(updateCountdown, 1000);
 }
+
 function updateCountdown() {
     time--;
 
@@ -133,7 +136,6 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!  Enter your initials to save your score`;
     inputDiv.removeAttribute("class");
 }
@@ -153,11 +155,16 @@ function saveScore(event) {
 }
 
 function displayScores() {
-var savedScores = localStorage.getItem("scores") || [];
-console.log(savedScores);
-}
+    var savedScores = localStorage.getItem("scores") || [];
+    console.log(savedScores);
+    }    
 
-initialButton.addEventListener("click", (event) => {
+viewScores.addEventListener("click", function() {
+    var savedScores = localStorage.getItem("scores") || [];
+    console.log(savedScores);
+});
+
+  initialButton.addEventListener("click", (event) => {
     event.preventDefault();
     startScreen.classList.remove("hide");
     quizScreen.classList.add("hide");
