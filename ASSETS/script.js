@@ -58,10 +58,11 @@ const countdownEl = document.getElementById("countDown");
 const inputDiv = document.getElementById("initial-screen");
 const initialButton = document.getElementById("initial-btn");
 const initialForm = document.getElementById("initial-form");
-
+const sect = document.querySelector("section");
 const div = document.querySelector("div");
 const viewScores = document.getElementById("view-scores");
 const savedScores = document.getElementById("scores");
+const paragraph = document.getElementById("paragragh");
 
 initialButton.addEventListener("click", function (event) {
     saveScore(event);
@@ -140,6 +141,10 @@ function showScore() {
     inputDiv.removeAttribute("class");
 }
 
+//const newParagraph = document.createElement("p");
+//paragraph.textContent = document.getElementById("scores");
+//document.body.appendChild(newParagraph);
+
 function saveScore(event) {
     event.preventDefault();
     var input = document.getElementById("initial-input").value;
@@ -161,6 +166,7 @@ function displayScores() {
 
 viewScores.addEventListener("click", function() {
     var savedScores = localStorage.getItem("scores") || [];
+    alert(savedScores);
     console.log(savedScores);
 });
 
