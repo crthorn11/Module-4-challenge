@@ -12,9 +12,9 @@ const questions = [
     {
         question: "The condition in an if / else statement is enclosed within ___.",
         answers: [
-            { text: "quotes", correct: true },
+            { text: "quotes", correct: false },
             { text: "curly brackets", correct: false },
-            { text: "parenthises", correct: false },
+            { text: "parenthises", correct: true },
             { text: "square brackets", correct: false },
         ]
     },
@@ -23,8 +23,8 @@ const questions = [
         answers: [
             { text: "numbers and strings", correct: false },
             { text: "other arrays", correct: false },
-            { text: "booleans", correct: true },
-            { text: "all of the above", correct: false },
+            { text: "booleans", correct: false },
+            { text: "all of the above", correct: true },
         ]
     },
     {
@@ -53,7 +53,7 @@ const nextButton = document.getElementById("next-btn");
 const startBtn = document.getElementById("start-btn");
 const quizScreen = document.getElementById("quiz-screen");
 const startScreen = document.getElementById("start-screen");
-let time = 6;
+let time = 60;
 const countdownEl = document.getElementById("countDown");
 const inputDiv = document.getElementById("initial-screen");
 const initialButton = document.getElementById("initial-btn");
@@ -149,7 +149,7 @@ function saveScore(event) {
     event.preventDefault();
     var input = document.getElementById("initial-input").value;
     var userScore = {
-        initials: input,
+        initials: input, 
         score: score
     };
     console.log(userScore);
